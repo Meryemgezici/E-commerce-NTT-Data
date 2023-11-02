@@ -1,0 +1,1 @@
+export const categoryOpt=["Category name1", "Category name2", "Category name3","Category name4"];
