@@ -1,1 +1,5 @@
-export const categoryOpt=["Category name1", "Category name2", "Category name3","Category name4"];
+export const categoryOpt=["Data","Category name", "Category name", "Category name","Category name"];
+
+export const menuItems=["Menu Item","Menu Item","Menu Item","Menu Item","Menu Item","Menu Item","Menu Item","Menu Item","Menu Item","Menu Item","Menu Item","Menu Item"];
+
+export const subHeaders=["Subheader","Subheader","Subheader","Subheader","Subheader","Subheader","Subheader","Subheader","Subheader","Subheader","Subheader","Subheader","Subheader","Subheader","Subheader","Subheader"];

@@ -12,13 +12,13 @@ const Header = () => {
     return (
         <header className="mt-6 p-4 sm:flex sm:items-center sm:justify-center max-[640px]:flex max-[640px]:flex-col gap-7 ">
             <div className="flex justify-between">
-                <img className="w-48 h-6" src="/logo.png" alt="" />
+                <img className="w-48 h-6 " src="/logo.png" alt="" />
 
 
                 <label className="swap swap-rotate">
 
                     {/* this hidden checkbox controls the state */}
-                    <input onClick={()=>setShowCategory(!showCategory)} type="checkbox" />
+                    <input onClick={() => setShowCategory(!showCategory)} type="checkbox" />
 
 
                     {/* hamburger icon */}
@@ -40,8 +40,8 @@ const Header = () => {
 
                 <input placeholder="Search..." type="text" className="rounded border border-[#89919A] lg:w-[685px] sm:w-[364px] max-[640px]:w-[448px] h-10 px-4 py-2 outline-none" />
 
-                <Categories/>
-                
+                <Categories />
+
                 <button className="flex justify-center items-center h-10 w-28 bg-[#0059BC] sm:rounded  max-[640px]:absolute max-[640px]:right-0 max-[640px]:rounded-r">
                     <BiSearch className="w-6 h-6 text-white" />
                 </button>
