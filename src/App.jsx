@@ -1,5 +1,6 @@
 import Header from "./components/Header"
 import Menu from "./components/Menu"
+import MenuDetails from "./components/MenuDetails"
 
 function App() {
 
