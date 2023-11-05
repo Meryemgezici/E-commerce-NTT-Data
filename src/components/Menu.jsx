@@ -15,9 +15,7 @@ const Menu = () => {
                 setVisibleItems(6);
                 // Ekran genişse "More" bölümünü gizle
             } else if (window.innerWidth >= 1024) {
-                console.log("mery");
                 setVisibleItems(12);
-
             }
             else {
                 setVisibleItems(0);
@@ -37,7 +35,6 @@ const Menu = () => {
         setShowMore(!showMore);
     }
 
-    console.log(isHovered);
 
     return (
         <div className="flex flex-col mt-6 relative z-40">

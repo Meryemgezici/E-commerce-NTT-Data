@@ -6,8 +6,6 @@ import Categories from "./Categories"
 const Header = () => {
 
     const [showCategory, setShowCategory] = useState(false);
-
-    console.log(showCategory);
     return (
         <header className="mt-6 p-4 sm:flex sm:items-center sm:justify-center max-[640px]:flex max-[640px]:flex-col gap-7 ">
             <div className="flex justify-between">

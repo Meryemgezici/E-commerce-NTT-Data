@@ -13,13 +13,25 @@ body{
     backdrop-filter: blur(4.5px);
     height: 58px;
     flex-shrink: 0;
-
     
 }
-.splide__pagination__page{
+#splide01 .splide__pagination__page{
     background-color: white;
 }
 
 .splide__arrow{
     display: none;
 }
+
+#splide05 .splide__pagination{
+    /* display: none; */
+    position: static; 
+   
+}
+
+#splide05 .splide__pagination__page{
+    background: black;
+    
+}
+
+

@@ -1,9 +1,17 @@
+import { useEffect } from "react"
 import AdSplide from "./components/AdSplide"
 import Header from "./components/Header"
 import Menu from "./components/Menu"
 import Products from "./components/Products"
+import { useDispatch } from "react-redux"
+import { getProducts } from "./redux/actions/productAction"
 
 function App() {
+  const dispatch=useDispatch();
+
+  useEffect(()=>{
+    dispatch(getProducts());
+  },[]);
 
   return (
     <div>
@@ -12,7 +20,6 @@ function App() {
      <Menu/>
      <AdSplide/>
      <Products/>
-     
     </div>
   )
 }
