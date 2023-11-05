@@ -36,7 +36,7 @@ const Categories = () => {
                         <MdKeyboardArrowUp className="text-3xl" />
                     </button>
                     {/* kategorileri listesini ekrana basma */}
-                    <ul className="flex flex-col justify-center items-center rounded p-3 w-[170px] h-52 bg-[#00254F] text-white gap-2">
+                    <ul className="flex flex-col justify-center items-center rounded p-3 w-[170px] h-52 bg-[#00254F] text-white gap-2 z-50">
                         {categoryOpt.map((category, i) => <li onClick={() => selectClick(category)} className=" w-[132px] h-[60px] px-2 py-1 cursor-pointer hover:bg-[#0059BC] rounded" key={i} ><a>{category}</a></li>)}
 
                     </ul>

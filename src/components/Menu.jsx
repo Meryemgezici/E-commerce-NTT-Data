@@ -40,9 +40,9 @@ const Menu = () => {
     console.log(isHovered);
 
     return (
-        <div className="flex flex-col mt-6 relative ">
+        <div className="flex flex-col mt-6 relative z-40">
             <div className="flex justify-center items-center mt-6 ">
-                <ul className="flex gap-10 text-[#6A6D70] ">
+                <ul className="flex gap-8 text-[#6A6D70] ">
 
                     {visibleItems === 12 &&
                         <>{menuItems.slice(0, visibleItems).map((item, i) => <li onMouseEnter={() => setIsHovered(true)}
@@ -54,16 +54,16 @@ const Menu = () => {
                         <>
                             {menuItems.slice(0, visibleItems).map((item, i) => <li className="cursor-pointer hover:border-b-2 pb-3 hover:border-[#0059BC] hover:text-[#32363A] hover:font-medium max-h-7" key={i} ><a>{item}</a></li>)}
                             <div>
-                                {showMore ? <>
+                                {showMore ? <div className="relative    w-[100px]">
                                     <button onClick={(e) => handleClick(e)} className="flex justify-center items-center gap-1 mb-3">
                                         <p>More</p>
                                         <MdKeyboardArrowUp />
                                     </button>
-                                    <div className="flex flex-col justify-center items-center gap-[10px] bg-[#F4F5F6] min-w-24 min-h-24 p-3 rounded">
+                                    <div className="absolute flex flex-col justify-center items-center gap-[10px] bg-[#F4F5F6]  min-h-24 p-3 rounded ">
                                         {menuItems.slice(visibleItems, menuItems.length).map((item, i) => <li className="cursor-pointer" key={i} ><a>{item}</a></li>)}
                                     </div>
 
-                                </> : <button onClick={(e) => handleClick(e)} className="flex justify-center items-center gap-1">
+                                </div> : <button onClick={(e) => handleClick(e)} className="flex justify-center items-center gap-1">
                                     <p>More</p>
                                     <MdKeyboardArrowDown />
                                 </button>}

@@ -1,4 +1,3 @@
-import { categoryOpt } from "../utils/contants"
 import { BiSearch } from "react-icons/bi"
 import { GiHamburgerMenu } from "react-icons/gi"
 import { AiOutlineClose } from "react-icons/ai"
