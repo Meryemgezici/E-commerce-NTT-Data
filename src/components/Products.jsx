@@ -11,7 +11,6 @@ const Products = () => {
     const [moreProduct, setMoreProduct] = useState(true);
     const [visibleNumber, setVisibleNumber] = useState(4);
     const [countlikes, setCountLikes] = useState(0);
-    const [showMoreBtn, setShowMoreBtn] = useState(true);
     const [isLikes, setIsLikes] = useState(false);
     const dispatch = useDispatch();
 
@@ -49,7 +48,7 @@ const Products = () => {
                         dispatch(removeFilter());
                         setIsLikes(!isLikes);
                         // setMoreProduct(!moreProduct);
-                    }} className="bg-white text-[#0059BC] py-1 px-2 rounded border border-[#0059BC] cursor-pointer">Tümünü Göster</p> : <p onClick={() => favoritesClick()} className="bg-[#0059BC] text-white py-1 px-2 rounded cursor-pointer">Beğenilenler</p>
+                    }} className="bg-white text-[#0059BC] py-1 px-2 rounded border border-[#0059BC] cursor-pointer">Tüm Ürünler</p> : <p onClick={() => favoritesClick()} className="bg-[#0059BC] text-white py-1 px-2 rounded cursor-pointer">Beğenilenler</p>
                     }
 
 
@@ -120,10 +119,6 @@ const Products = () => {
                     <AiOutlineArrowRight />
                 </div>
             </button>
-
-           
-                
-
         </div>
     )
 }

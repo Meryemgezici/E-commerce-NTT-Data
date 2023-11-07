@@ -7,3 +7,5 @@ export const subHeaders=["Subheader","Subheader","Subheader","Subheader","Subhea
 export const subTitles=["Subtitle","Subtitle","Subtitle","Subtitle"];
 
 export const titles=["Title","Title","Title","Title","Title"];
+
+export const categories=["Category 1", "Category 2", "Category 3","Category 4"];
