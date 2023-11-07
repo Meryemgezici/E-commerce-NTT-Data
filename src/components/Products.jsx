@@ -29,10 +29,10 @@ const Products = () => {
     const favoritesClick = () => {
         dispatch(filterFavorite());
         setIsLikes(!isLikes);
-       
+
     }
 
-    
+
     return (
         <div className="flex flex-col  mt-12 p-3 m-6 lg:m-32 max-[640px]:m-4">
 
@@ -111,14 +111,23 @@ const Products = () => {
                     }
                 </>
             }
-            <button onClick={(e) => handleClick(e)} className="flex justify-center items-center max-[768px]:hidden">
-                <div className="flex items-center gap-2 bg-[#0059BC] text-white font-normal rounded py-4 px-8 ">
-                    {
-                        moreProduct ? <p >Daha Fazla</p> : <p>Daha Az</p>
-                    }
-                    <AiOutlineArrowRight />
-                </div>
-            </button>
+            {isLikes ? (
+                countlikes > 0 && (
+                    <button onClick={(e) => handleClick(e)} className="flex justify-center items-center max-[768px]:hidden">
+                        <div className="flex items-center gap-2 bg-[#0059BC] text-white font-normal rounded py-4 px-8 ">
+                            {moreProduct ? <p>Daha Fazla</p> : <p>Daha Az</p>}
+                            <AiOutlineArrowRight />
+                        </div>
+                    </button>
+                )
+            ) : (
+                <button onClick={(e) => handleClick(e)} className="flex justify-center items-center max-[768px]:hidden">
+                    <div className="flex items-center gap-2 bg-[#0059BC] text-white font-normal rounded py-4 px-8 ">
+                        {moreProduct ? <p>Daha Fazla</p> : <p>Daha Az</p>}
+                        <AiOutlineArrowRight />
+                    </div>
+                </button>
+            )}
         </div>
     )
 }

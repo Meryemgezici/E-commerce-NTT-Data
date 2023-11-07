@@ -1,9 +1,11 @@
 import { subHeaders } from "../utils/contants"
 import menuImg from "../assets/menu.png"
-const MenuDetails = () => {
+const MenuDetails = ({setIsHovered}) => {
 
     return (
-        <div className="flex absolute top-full left-1/2 transform -translate-x-1/2 items-center justify-center bg-[#D9D9D9] rounded-[1px] min-h-[300px] w-[1259px] py-[30px] px-[48px] ">
+        <div className="flex absolute top-full left-1/2 transform -translate-x-1/2 items-center justify-center bg-[#D9D9D9] rounded-[1px] min-h-[300px] w-[1259px] py-[30px] px-[48px] " onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)} >
+
             <div className="flex gap-24 ">
                 <div className="flex flex-col gap-2 h-60">
                     <h2 className="text-lg font-bold">Header</h2>

@@ -12,8 +12,8 @@ const Footer = () => {
                         <img className="bg-[#0059BC] text-white w-[170px] h-[42px]" src="/src/assets/nttLogo.png" alt="" />
                         <p className="w-[407px] h-[46px] pt-6">Lorem ipsum dolor sit amet consectetur. Auctor tempor pretium aliquam neque.</p>
 
-                        <div className="flex justify-center items-center pt-14 pb-16 ">
-                            <input type="text" placeholder="Email" className="md:w-[407px] h-10 px-2 w-[275px]" />
+                        <div className="flex  items-center pt-14 pb-16 ">
+                            <input type="text" placeholder="Email" className="md:w-[407px] h-10 px-2 sm:w-[275px] w-[200px]" />
                             <button className="bg-[#00254F] w-[101px] h-10 px-2 py-1">Sign Up</button>
                         </div>
                     </div>

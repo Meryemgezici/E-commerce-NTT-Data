@@ -35,6 +35,7 @@ const Menu = () => {
         setShowMore(!showMore);
     }
 
+    console.log("menu:"+isHovered);
 
     return (
         <div className="flex flex-col mt-6 relative z-40">
@@ -43,7 +44,12 @@ const Menu = () => {
 
                     {visibleItems === 12 &&
                         <>{menuItems.slice(0, visibleItems).map((item, i) => <li onMouseEnter={() => setIsHovered(true)}
-                            onMouseLeave={() => setIsHovered(false)} className="cursor-pointer hover:border-b-2 pb-3 hover:border-[#0059BC] hover:text-[#32363A] hover:font-medium max-h-7 " key={i} ><a >{item}</a></li>
+                            onMouseLeave={() => setIsHovered(false)}  className={`cursor-pointer pb-3 ${
+                                isHovered &&
+                                   "hover:border-b-2 hover:border-[#0059BC] hover:text-[#32363A] hover:font-medium "
+                                 
+                              } cursor-pointer max-h-7 `} key={i} ><a >{item}</a>
+                             </li>
                         )}
                         </>
                     }
@@ -74,7 +80,7 @@ const Menu = () => {
             </div>
 
             {
-                isHovered && <MenuDetails />
+                isHovered && <MenuDetails setIsHovered={setIsHovered} />
             }
 
 
