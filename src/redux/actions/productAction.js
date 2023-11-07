@@ -5,7 +5,7 @@ export const getProducts = createAsyncThunk("getProducts",
     async() => {
        const res= await axios.get("https://honey-badgers-ecommerce.glitch.me/products");
 
-       const newData=res.data.map((product)=>({...product, product,like:false}));
+       const newData=res.data.map((product)=>({...product,like:false}));
        return newData;
     }
 

@@ -35,19 +35,18 @@ const productSlice=createSlice({
 
     reducers: {
         statuLike: (state, action) => {
-            const index = state.products.findIndex((item) => item.id === action.payload);
+            const index = state.mainProducts.findIndex((item) => item.id === action.payload);
 
-            const updatedProducts = [...state.products];
+            const updatedProducts = [...state.mainProducts];
         
             updatedProducts[index]={...updatedProducts[index],like:!updatedProducts[index].like}
-            console.log("updatedProducts[index].like:"+updatedProducts[index].like);
-          
-            state.products = updatedProducts;
-            console.log(state.products);
+            
+            state.mainProducts = updatedProducts;
+            state.products = updatedProducts;         
           
         },
         filterFavorite: (state) => {
-            const filter = state.products.filter((item) => item.like === true);
+            const filter = state.mainProducts.filter((item) => item.like === true);
 
             state.products=filter;
           

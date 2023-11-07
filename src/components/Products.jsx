@@ -30,7 +30,7 @@ const Products = () => {
     const favoritesClick = () => {
         dispatch(filterFavorite());
         setIsLikes(!isLikes);
-  
+
     }
 
 
@@ -43,12 +43,15 @@ const Products = () => {
                     <AiOutlineHeart style={{ strokeWidth: 10 }} className="w-6 h-6 mr-2 text-xl" />
                     {/* <AiFillHeart className="text-red-600"/> */}
                     <p className="mr-5 ">{countlikes} Ürün</p>
-                   
-                       
-                            { isLikes ?<p className="bg-white text-[#0059BC] py-1 px-2 rounded border border-[#0059BC] cursor-pointer">Tümünü Göster</p>:<p onClick={() => favoritesClick()}   className="bg-[#0059BC] text-white py-1 px-2 rounded cursor-pointer">Beğenilenler</p>
-                            }
-                       
-                 
+
+
+                    {isLikes ? <p onClick={() => {
+                        dispatch(removeFilter());
+                        setIsLikes(!isLikes);
+                    }} className="bg-white text-[#0059BC] py-1 px-2 rounded border border-[#0059BC] cursor-pointer">Tümünü Göster</p> : <p onClick={() => favoritesClick()} className="bg-[#0059BC] text-white py-1 px-2 rounded cursor-pointer">Beğenilenler</p>
+                    }
+
+
                 </div>
 
             </div>
