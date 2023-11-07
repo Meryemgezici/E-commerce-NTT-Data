@@ -4,4 +4,6 @@ export const menuItems=["Menu Item","Menu Item","Menu Item","Menu Item","Menu It
 
 export const subHeaders=["Subheader","Subheader","Subheader","Subheader","Subheader","Subheader","Subheader"];
 
-export const titles=["Subtitle","Subtitle","Subtitle","Subtitle"];
+export const subTitles=["Subtitle","Subtitle","Subtitle","Subtitle"];
+
+export const titles=["Title","Title","Title","Title","Title"];

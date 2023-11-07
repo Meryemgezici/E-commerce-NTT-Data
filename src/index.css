@@ -8,7 +8,7 @@ body{
     overflow-x: hidden;
 }
 
-.splide__pagination {
+#splide01 .splide__pagination {
     background: rgba(0, 0, 0, 0.40);
     backdrop-filter: blur(4.5px);
     height: 58px;
@@ -30,17 +30,22 @@ body{
 }
 
 #splide02 .splide__pagination__page{
-    background: black;
+    background: #D1D1D1;
+}
+.splide__pagination__page .is-active{
+    background: #0059BC ;
+    color:#0059BC !important;
+    
 }
 
-#splide05 .splide__pagination{
-    /* display: none; */
+/* #splide05 .splide__pagination{
+   
     position: static; 
    
 }
 
 #splide05 .splide__pagination__page{
     background: black;
-}
+} */
 
 
