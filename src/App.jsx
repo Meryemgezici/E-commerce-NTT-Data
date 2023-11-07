@@ -5,6 +5,7 @@ import Menu from "./components/Menu"
 import Products from "./components/Products"
 import { useDispatch } from "react-redux"
 import { getProducts } from "./redux/actions/productAction"
+import Footer from "./components/Footer"
 
 function App() {
   const dispatch=useDispatch();
@@ -20,6 +21,7 @@ function App() {
      <Menu/>
      <AdSplide/>
      <Products/>
+     <Footer/>
     </div>
   )
 }

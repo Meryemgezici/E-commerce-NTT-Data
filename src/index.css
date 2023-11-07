@@ -5,7 +5,7 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-
+    overflow-x: hidden;
 }
 
 .splide__pagination {
@@ -23,6 +23,16 @@ body{
     display: none;
 }
 
+#splide02 .splide__pagination{
+    /* display: none; */
+    position: static; 
+   
+}
+
+#splide02 .splide__pagination__page{
+    background: black;
+}
+
 #splide05 .splide__pagination{
     /* display: none; */
     position: static; 
@@ -31,7 +41,6 @@ body{
 
 #splide05 .splide__pagination__page{
     background: black;
-    
 }
 
 
