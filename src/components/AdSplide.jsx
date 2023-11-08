@@ -21,7 +21,7 @@ const AdSplide = () => {
                 key={imgIndex}
                 src={src}
                 alt={`Resim ${i + 1}`}
-                className={`w-full ${
+                className={`w-full h-full${
                   // Mobilde görüntüyü göster
                   imgIndex === 2 ? "block md:hidden lg:hidden xl:hidden" : ""
                 }

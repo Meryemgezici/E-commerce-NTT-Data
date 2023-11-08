@@ -1,3 +1,15 @@
+import pcAd1 from "../assets/pcAd1.png";
+import pcAd2 from "../assets/pcAd2.png";
+import pcAd3 from "../assets/pcAd3.png";
+import pcAd4 from "../assets/pcAd4.png";
+import tabletAd1 from "../assets/tabletAd1.png";
+import tabletAd2 from "../assets/tabletAd2.png";
+import tabletAd3 from "../assets/tabletAd3.png";
+import mobilAd1 from "../assets/mobilAd1.png";
+import mobilAd2 from "../assets/mobilAd2.png";
+import mobilAd3 from "../assets/mobilAd3.png";
+import mobilAd4 from "../assets/mobilAd4.png";
+
 export const categoryOpt=["Data","Category name", "Category name", "Category name","Category name"];
 
 export const menuItems=["Menu Item","Menu Item","Menu Item","Menu Item","Menu Item","Menu Item","Menu Item","Menu Item","Menu Item","Menu Item","Menu Item","Menu Item"];
@@ -12,23 +24,23 @@ export const categories=["Category 1", "Category 2", "Category 3","Category 4"];
 
 export const ads = [
     [
-      'src/assets/pcAd1.png',
-      'src/assets/tabletAd1.png',
-      'src/assets/mobilAd1.png',
+      pcAd1,
+      tabletAd1,
+      mobilAd1,
     ],
     [
-      'src/assets/pcAd2.png',
-      'src/assets/tabletAd2.png',
-      'src/assets/mobilAd2.png',
+      pcAd2,
+      tabletAd2,
+      mobilAd2,
     ],
     [
-      'src/assets/pcAd3.png',
-      'src/assets/tabletAd3.png',
-      'src/assets/mobilAd3.png',
+      pcAd3,
+      tabletAd3,
+      mobilAd3,
     ],
     [
-      'src/assets/pcAd4.png',
-      'src/assets/pcAd4.png',
-      'src/assets/mobilAd4.png',
+      pcAd4,
+      pcAd4,
+      mobilAd4,
     ],
   ];
