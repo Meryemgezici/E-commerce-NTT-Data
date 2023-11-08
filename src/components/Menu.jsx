@@ -1,12 +1,10 @@
-import { useEffect, useState } from 'react';
-import { menuItems } from '../utils/contants';
-import {
-  MdKeyboardArrowDown,
-  MdKeyboardArrowUp,
-} from 'react-icons/md';
-import MenuDetails from './MenuDetails';
+import { useEffect, useState } from "react";
+import { menuItems } from "../utils/contants";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
+import MenuDetails from "./MenuDetails";
 
 const Menu = () => {
+  // ekranda görünecek menu item sayısı
   const [visibleItems, setVisibleItems] = useState(0);
   const [showMore, setShowMore] = useState(false);
 
@@ -22,11 +20,11 @@ const Menu = () => {
       }
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     handleResize();
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -35,7 +33,6 @@ const Menu = () => {
     setShowMore(!showMore);
   };
 
-
   return (
     <div className="flex flex-col mt-6 relative z-40 ">
       <div className="flex justify-center items-center mt-6 ">
@@ -43,10 +40,7 @@ const Menu = () => {
           {visibleItems === 12 && (
             <>
               {menuItems.slice(0, visibleItems).map((item, i) => (
-                <li
-                  className="cursor-pointer pb-3 group max-h-7"
-                  key={i}
-                >
+                <li className="cursor-pointer pb-3 group max-h-7" key={i}>
                   <a className="group-hover:border-b-2 group-hover:border-[#0059BC] group-hover:text-[#32363A] group-hover:font-medium">
                     {item}
                   </a>
