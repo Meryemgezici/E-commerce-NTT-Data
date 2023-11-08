@@ -8,12 +8,17 @@ import '@splidejs/react-splide/css';
 import { filterFavorite, removeFilter } from "../redux/slices/productSlice";
 const Products = () => {
     const store = useSelector((store) => store);
+    // Daha fazla ürün gösterme
     const [moreProduct, setMoreProduct] = useState(true);
+    // Kaç ürün görünsün
     const [visibleNumber, setVisibleNumber] = useState(4);
+    // Beğeni sayısı
     const [countlikes, setCountLikes] = useState(0);
+    // Beğeni tuşu
     const [isLikes, setIsLikes] = useState(false);
     const dispatch = useDispatch();
 
+    // Ekrana kaç tane ürün gelecek.
     const handleClick = (e) => {
         e.preventDefault();
         setMoreProduct(!moreProduct);
@@ -26,41 +31,32 @@ const Products = () => {
 
     }
 
+    // Beğenilere gelince products stateini güncelle
     const favoritesClick = () => {
         dispatch(filterFavorite());
         setIsLikes(!isLikes);
-
     }
-
 
     return (
         <div className="flex flex-col  mt-12 p-3 m-6 lg:m-32 max-[640px]:m-4">
-
             <div className="flex items-center justify-between flex-col sm:flex-row mb-4">
                 <h1 className="text-3xl font-bold leading-normal">Content title goes here</h1>
                 <div className="flex justify-center items-center font-bold">
                     <AiOutlineHeart style={{ strokeWidth: 10 }} className="w-6 h-6 mr-2 text-xl" />
-                    {/* <AiFillHeart className="text-red-600"/> */}
                     <p className="mr-5 ">{countlikes} Ürün</p>
-
 
                     {isLikes ? <p onClick={() => {
                         dispatch(removeFilter());
                         setIsLikes(!isLikes);
-                        // setMoreProduct(!moreProduct);
                     }} className="bg-white text-[#0059BC] py-1 px-2 rounded border border-[#0059BC] cursor-pointer">Tüm Ürünler</p> : <p onClick={() => favoritesClick()} className="bg-[#0059BC] text-white py-1 px-2 rounded cursor-pointer">Beğenilenler</p>
                     }
-
-
                 </div>
-
             </div>
 
-            {/* eğerki ürünler yüklenmediyse */}
+            {/* eğer ürünler yüklenmediyse */}
             {store.isLoading && <Loading />}
 
             {/*Product Cards */}
-
             {moreProduct ? <div className="mt-8 md:grid md:grid-cols-4 gap-3 max-[768px]:hidden">
 
                 {
@@ -84,16 +80,16 @@ const Products = () => {
                     )
                 }
             </div>
-
             }
 
+            {/* Mobile splide Card */}
             <div className="md:hidden">
                 <Splide
                     options={{
                         type: 'fade',
                         perPage: 1,
                         autoplay: true,
-                        interval: 100000,
+                        interval: 5000,
                         rewind: true,
                     }}
                 >
@@ -105,12 +101,15 @@ const Products = () => {
                 </Splide>
             </div>
 
+            {/* Favoriler boş ise */}
             {isLikes &&
                 <>
                     {countlikes === 0 && <p className="flex justify-center items-center  text-[#0059BC]  font-normal rounded py-4 px-8 text-3xl">Favorilerde ürün yok.</p>
                     }
                 </>
             }
+
+            {/* Favoriler kısmı boş ise buttonu gösterme değilse göster */}
             {isLikes ? (
                 countlikes > 0 && (
                     <button onClick={(e) => handleClick(e)} className="flex justify-center items-center max-[768px]:hidden">
