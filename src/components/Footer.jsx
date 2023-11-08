@@ -1,7 +1,7 @@
 import { subTitles, titles } from "../utils/contants";
 import { AiOutlineInstagram, AiFillLinkedin } from "react-icons/ai";
 import { BiLogoFacebook } from "react-icons/bi";
-
+import nttLogo from "../assets/nttLogo.png";
 const Footer = () => {
   return (
     <div className="bg-[#0059BC] text-white">
@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="flex flex-col pt-16">
             <img
               className="bg-[#0059BC] text-white w-[170px] h-[42px]"
-              src="/src/assets/nttLogo.png"
+              src={nttLogo}
               alt=""
             />
             <p className="w-[407px] h-[46px] pt-6">
